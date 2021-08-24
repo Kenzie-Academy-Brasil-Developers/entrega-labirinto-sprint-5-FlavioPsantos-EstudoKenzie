@@ -66,7 +66,7 @@
     }
     
     .personagem {
-        background-image: url("/assets/img/pato.png");
+        background-image: url("../img/pato.png");
         background-size: 20px;
         margin-top: -10px;
         background-repeat: no-repeat;
