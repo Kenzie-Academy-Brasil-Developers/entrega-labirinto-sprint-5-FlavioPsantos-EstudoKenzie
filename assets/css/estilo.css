@@ -75,12 +75,14 @@
     }
     
     .personagem {
-        background-image: url("/assets/img/pato.png");
-        background-size: 20px;
-        margin-top: -6px;
+        /* background-image: url("/assets/img/pato.png");
+        background-size: 20px; */
+        margin-top: -10px;
         background-repeat: no-repeat;
         height: 30px;
         width: 30px;
+        border-radius: 50%;
+        background-color: burlywood;
         position: absolute;
         animation-duration: 100ms;
         animation-name: slideRight;
@@ -113,7 +115,7 @@
             height: 1px;
         }
         .personagem {
-            margin-top: -6px;
+            margin-top: -15px;
             height: 30px;
             width: 30px;
             background-size: 20px;
