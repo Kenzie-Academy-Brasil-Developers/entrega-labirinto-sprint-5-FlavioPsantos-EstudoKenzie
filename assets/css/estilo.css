@@ -1,0 +1,130 @@
+    body {
+        padding: 0;
+        box-sizing: border-box;
+        max-width: 1000px;
+        min-width: 350px;
+        margin: 0 auto;
+        background: rgb(52, 43, 97);
+        background: -moz-linear-gradient(77deg, rgba(52, 43, 97, 0.9528186274509804) 0%, rgba(99, 132, 221, 1) 35%, rgba(0, 212, 255, 1) 100%);
+        background: -webkit-linear-gradient(77deg, rgba(52, 43, 97, 0.9528186274509804) 0%, rgba(99, 132, 221, 1) 35%, rgba(0, 212, 255, 1) 100%);
+        background: linear-gradient(77deg, rgba(52, 43, 97, 0.9528186274509804) 0%, rgba(99, 132, 221, 1) 35%, rgba(0, 212, 255, 1) 100%);
+        filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#342b61", endColorstr="#00d4ff", GradientType=1);
+    }
+    
+    header {
+        width: 100%;
+        height: 3vh;
+        margin: 0 auto;
+        background-color: darkgray;
+        opacity: 90%;
+        position: fixed;
+    }
+    
+    #tela_vitoria {
+        width: 300px;
+        height: 300px;
+        z-index: 1;
+        top: 20vh;
+        right: 30%;
+        left: 30%;
+        position: absolute;
+        margin: 0 auto;
+        background-color: blanchedalmond;
+        padding: 2vh;
+        text-align: center;
+        font-size: 50px;
+        border-radius: 50px;
+        display: none;
+        transition-duration: 2s;
+    }
+    
+    #conteudoPrincipal>#tabuleiro {
+        padding-top: 1em;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    
+    #conteudoPrincipal>#tabuleiro>.lineMaze {
+        display: flex;
+        flex-wrap: wrap;
+        width: 8%;
+    }
+    
+    #conteudoPrincipal>#tabuleiro>.lineMaze>.wall,
+    .floor {
+        padding: 1em;
+        box-sizing: content-box;
+    }
+    
+    #conteudoPrincipal>#tabuleiro>.lineMaze>.wall {
+        background-color: gray;
+        flex-grow: 1;
+        width: 10px;
+        height: 5px;
+    }
+    
+    #conteudoPrincipal>#tabuleiro>.lineMaze>.floor {
+        background-color: greenyellow;
+        flex-grow: 1;
+        width: 10px;
+        height: 5px;
+    }
+    
+    .personagem {
+        background-image: url("/assets/img/pato.png");
+        background-size: 20px;
+        margin-top: -6px;
+        background-repeat: no-repeat;
+        height: 30px;
+        width: 30px;
+        position: absolute;
+        animation-duration: 100ms;
+        animation-name: slideRight;
+    }
+    
+    @media (min-width: 800px) {
+        body {
+            max-width: 1100px;
+        }
+        #conteudoPrincipal {
+            width: 70%;
+            height: 100vh;
+            background-color: darkslateblue;
+            opacity: 80%;
+            margin: 0 auto;
+        }
+        #conteudoPrincipal>#tabuleiro>.lineMaze {
+            width: 7%;
+        }
+        #conteudoPrincipal>#tabuleiro {
+            width: 100%;
+            height: 10%;
+        }
+        #conteudoPrincipal>#tabuleiro>.lineMaze>.wall {
+            width: 6px;
+            height: 1px;
+        }
+        #conteudoPrincipal>#tabuleiro>.lineMaze>.floor {
+            width: 6px;
+            height: 1px;
+        }
+        .personagem {
+            margin-top: -6px;
+            height: 30px;
+            width: 30px;
+            background-size: 20px;
+        }
+    }
+    
+    @keyframes slideRight {
+        from {
+            margin-left: 5px;
+        }
+        to {
+            margin-left: 0;
+        }
+    }
